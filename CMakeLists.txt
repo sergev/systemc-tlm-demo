@@ -32,5 +32,13 @@ target_link_libraries(test_build systemc gtest)
 add_executable(test_run3 main.cpp test_run3.cpp)
 target_link_libraries(test_run3 systemc gtest)
 
+add_executable(test_thread main.cpp test_thread.cpp)
+target_link_libraries(test_thread systemc gtest)
+
+add_executable(test_mem main.cpp test_mem.cpp)
+target_link_libraries(test_mem systemc gtest)
+
 add_test(test_build test_build)
 add_test(test_run3 test_run3)
+add_test(test_thread test_thread)
+add_test(test_mem test_mem)

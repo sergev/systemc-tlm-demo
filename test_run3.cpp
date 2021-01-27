@@ -1,6 +1,9 @@
 #include <gtest/gtest.h>
 #include <systemc.h>
 
+//
+// Run a fixed number of steps.
+//
 TEST(tlm, run3)
 {
     // Set the clock frequency to 1 GHz.
