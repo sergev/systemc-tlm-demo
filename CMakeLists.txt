@@ -26,7 +26,11 @@ enable_testing()
 get_target_property(GTEST_INCLUDE_DIR gtest INCLUDE_DIRECTORIES)
 include_directories(simulator ${GTEST_INCLUDE_DIR} /usr/local/include)
 
-add_executable(${PROJECT_NAME} main.cpp test.cpp)
-target_link_libraries(${PROJECT_NAME} systemc gtest)
+add_executable(test_build main.cpp test_build.cpp)
+target_link_libraries(test_build systemc gtest)
 
-gtest_discover_tests(${PROJECT_NAME} EXTRA_ARGS --gtest_repeat=1 PROPERTIES TIMEOUT 120)
+add_executable(test_run3 main.cpp test_run3.cpp)
+target_link_libraries(test_run3 systemc gtest)
+
+add_test(test_build test_build)
+add_test(test_run3 test_run3)
