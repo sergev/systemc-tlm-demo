@@ -218,7 +218,7 @@ private:
         trans.set_data_length(sizeof(TYPE));
         trans.set_streaming_width(sizeof(TYPE));
 
-        sc_core::sc_time latency{ sc_core::SC_ZERO_TIME };
+        sc_core::sc_time latency = sc_core::SC_ZERO_TIME;
         socket->b_transport(trans, latency);
         wait(latency);
 
@@ -243,7 +243,7 @@ private:
         trans.set_data_length(sizeof(TYPE));
         trans.set_streaming_width(sizeof(TYPE));
 
-        sc_core::sc_time latency{ sc_core::SC_ZERO_TIME };
+        sc_core::sc_time latency = sc_core::SC_ZERO_TIME;
         socket->b_transport(trans, latency);
         wait(latency);
 
