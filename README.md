@@ -7,10 +7,33 @@
 
 ## Build
 
+    git clone https://github.com/sergev/systemc-tlm-demo.git
+    cd systemc-tlm-demo
     mkdir build
     cd build
     cmake ..
     make
+
+## Tests
+
+The tests can be run via 'make test' or directly with ctest:
+
+    $ cd build
+    $ make test
+    Running tests...
+    Test project /Users/vak/systemc-tlm-demo/build
+        Start 1: test_build
+    1/4 Test #1: test_build .......................   Passed    0.00 sec
+        Start 2: test_run3
+    2/4 Test #2: test_run3 ........................   Passed    0.00 sec
+        Start 3: test_thread
+    3/4 Test #3: test_thread ......................   Passed    0.00 sec
+        Start 4: test_mem
+    4/4 Test #4: test_mem .........................   Passed    0.00 sec
+
+    100% tests passed, 0 tests failed out of 4
+
+    Total Test time (real) =   0.02 sec
 
 ## Prerequisites
 
