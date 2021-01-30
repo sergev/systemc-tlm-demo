@@ -1,6 +1,7 @@
-#include <systemc.h>
-#include <gtest/gtest.h>
-
+//
+// Main routine for C++.
+// Please, include this file into your code.
+//
 int sc_main(int argc, char* argv[])
 {
     testing::InitGoogleTest(&argc, argv);

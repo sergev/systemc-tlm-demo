@@ -53,3 +53,5 @@ TEST(tlm, thread)
     sc_core::sc_start();
     EXPECT_EQ(sc_core::sc_time_stamp(), clock_period * 3);
 }
+
+#include "main.cpp"

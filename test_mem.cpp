@@ -280,3 +280,5 @@ TEST(tlm, mem)
     // Start simulation.
     sc_core::sc_start();
 }
+
+#include "main.cpp"
